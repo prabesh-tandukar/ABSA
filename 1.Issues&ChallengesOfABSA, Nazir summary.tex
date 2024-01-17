@@ -1,0 +1,46 @@
+\title{"Issues and Challenges of Aspect-based Sentiment Analysis: A Comprehensive Survey" by Ambreen Nazir, Yuan Rao, Lianwei Wu, and Ling Sun}
+\cite{NazirIssues&Chall2023}
+\section{Summary}
+ This paper focuses on Aspect-based Sentiment Analysis (AbSA) which extracts aspects, analyzes their sentiments, and studies the evolution of sentiments over time. The survey discusses the issues and challenges related to aspect extraction, aspect sentiment analysis, and sentiment evolution.
+
+ Key issues and challenges in AbSA includes:
+ 1. Aspect Extraction (AE): Effectively extracting explicit aspects, implicit aspects, aspect terms, entities, and Opinion Target Expressions (OTE) from text.
+ 
+ 2. Aspect Sentiment Analysis (ASA): Achieving sentimental calculation models that perform in-depth analysis of emotional aspects. This includes performing sentiment analysis at aspect, entity, and multi-word-target levels, and understanding how multi-task learning enhances sentiment prediction accuracy.
+
+ 3.Sentiment Evolution (SE): Measuring the change of sentiment value with time and predicting sentiment evolution over social data
+
+ The survey provides a comprehensive overview of the recent progress in AbSA, categorizing the research based on whether it contributes to aspect extraction, aspect sentiment analysis, or sentiment evolution. It also discusses future research directions and potential improvements in sentiment classification at the aspect level
+
+ /section{Aspect Extraction Methods}
+The different aspect extraction methods mentioned in the paper with their advantages and disadvantages are:
+1. AspectFrameNet: This method considers aspects as Frame elements and identifies implicit-aspect and explicit-aspect patterns as a sequence-labeling task using Conditional Random Fields (CRF). It updates itself with aspect patterns based on defined rules for every iteration
+
+Advantage: Can handle both explicit and implicit aspects.
+Disadvantage: Requires predefined aspect categories and may not work well for out-of-domain data
+
+2. Sentic Latent Dirichlet Algorithm (SLDA): This method integrates common-sense reasoning in the computation of word distributions. It forms clusters that capture the semantic association between words and multi-word expressions, and considers the words with the highest probability among clusters as aspect terms
+
+Advantage: Can handle implicit aspects and incorporates common-sense reasoning.
+Disadvantage: May require large datasets and improved feature engineering for better performance.
+
+3. Chunk-level extraction method: This method combines rule-based and supervised learning approaches to produce rational predictions and achieve higher-level aspect representations through a deep neural network architecture
+
+Advantage: Can handle neutral and implicit aspects.
+Disadvantage: May require end-to-end optimization and may not work well for out-of-domain data.
+
+4. Sentiment-scope graphs: This method captures the boundless long-distance dependencies between aspects and entities
+
+Advantage: Can handle the sentiment scope of neutral aspects.
+Disadvantage: May require complex graph-based methods and may not work well for out-of-domain data.
+
+5. Association-rule-mining techniques, aspects-clustering, co-occurrence matrix, and graph-based methods: These methods capture co-occurrence relations between words to find implicit aspects
+
+Advantage: Can handle the co-occurrence relations between words and aspects.
+Disadvantage: May lead to the extraction of similar aspects from sentences that should be considered differently.
+
+6. Lexico-syntactic examination: This method addresses the overlapping problem of potential aspect terms through lexico-syntactic examination of input data.
+Advantage: Can handle the overlapping problem of potential aspect terms.
+Disadvantage: May require complex lexico-syntactic examination and may not work well for out-of-domain data.
+
+In summary, each aspect extraction method has its advantages and disadvantages. Researchers should choose the most suitable method based on their specific requirements and the nature of the data they are working with.

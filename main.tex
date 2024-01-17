@@ -1,0 +1,155 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+
+\title{Aspect-based sentiment analysis}
+\author{Prabesh Tandukar}
+\date{November 2023}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\begin{abstract}
+Aspect-based sentiment analysis
+\end{abstract}
+
+\section{Introduction}
+The incredible increase in the use of social media over recent times has developed a growing interest in research in the area of Sentiment Analysis (SA) or Opinion Mining. SA involves tasks like collecting, analyzing, and aggregating online content from different sources like social media platforms, blogs, e-commerce sites, movie review platforms, and many more. Nowadays, consumers tend to opt for products or services that have good reviews posted by others. However, going through each review can be very cumbersome so the need for opinion mining to enhance effective decision-making for individuals as well as organizations has developed.\cite{ansari2020aspect} 
+
+Aspect-Based Sentiment Analysis (ABSA) is a critical subtask in sentiment analysis due to its ability to provide a fine-grained analysis of sentiments, focusing on specific aspects or features of a product, service, or topic rather than just an overall sentiment score. It takes into account the context of the sentiment, which is crucial for understanding the true meaning behind a statement. ABSA has wide-ranging applications across various domains, such as analyzing social media posts during critical events or in e-commerce. It can also be used to improve the performance of machine learning models, for instance through data augmentation techniques. Furthermore, ABSA can be extended to multi-modal data, combining text with other data types like images, to provide a more comprehensive sentiment analysis.\cite{Jiang2023AspectBasedSA}\cite{Gomes2023GABSAPTGN} \cite{lvarezLpez2018APF} \cite{Bensoltane2021ComparingWE} \cite{zhao2023m2df}
+
+The goals and objectives of this literature review in aspect-based sentiment analysis are to:
+\begin{enumerate}
+  \item Identify Effective Methods for Aspect Extraction.
+  \item Understand different Sentiment Analysis Techniques such as rule-based approaches, machine learning-based approaches, and deep learning-based approaches.
+  \item Explore Challenges in ABSA
+\end{enumerate}
+
+\section{Fundamentals of Sentiment Analysis: }
+Sentiment analysis, also known as opinion mining, is a field of study that involves analyzing people's sentiments, attitudes, or emotions toward something.\cite{NazirIssues&Chall2023}The basic task in sentiment analysis is to distinguish the polarity of an input text in terms of positive, negative, or neutral. This analysis can be done at different levels like document level, sentence level, or feature level.\cite{doi:10.1504/IJESMS.2021.119892}
+
+\subsection{Challenges and Limitations of Traditional Sentiment Analysis: }    
+ Traditional sentiment analysis methods face several challenges the inherent ambiguity of languages, cultural factors, linguistic nuances, and the difficulty of generalizing any text analysis solution to different language vocabularies.\cite{NazirIssues&Chall2023} 
+
+\subsection{Need for Aspect-Based Sentiment Analysis:}
+Aspect-Based Sentiment Analysis (ABSA) is a more fine-grained approach to sentiment analysis. It extracts fine-grained sentiment information in user-generated reviews, as it aims at predicting the polarities towards predefined aspect categories or relevant entities in free text.\cite{Feng2022UnrestrictedAM} ABSA is particularly useful in situations where the sentiment expressed may be different for different aspects of a product or service. For example, a review might express positive sentiment about a product's price but negative sentiment about its quality. ABSA allows for this level of detail in sentiment analysis, making it a valuable tool for understanding nuanced user feedback.\cite{Feng2022UnrestrictedAM}
+
+\section{Aspect-Based Sentiment Analysis:}
+Aspect-Based Sentiment Analysis (ABSA) is a sub-field of sentiment analysis that focuses on extracting fine-grained sentiment information from text. Unlike traditional sentiment analysis, which typically classifies the overall sentiment of a text as positive, negative, or neutral, ABSA goes a step further by identifying specific aspects or entities within the text and determining the sentiment expressed towards each of these aspects.\cite{doi:10.1504/IJESMS.2021.119892} \cite{NazirIssues&Chall2023}
+
+\subsection{Significance of ABSA:}
+ABSA is particularly significant because it provides a more detailed understanding of sentiment in text. It allows for the extraction of nuanced sentiment information, which can be crucial in various applications such as product reviews, customer feedback analysis, and social media analysis. For instance, in a product review, a customer might express positive sentiment about the product's design but negative sentiment about its price. ABSA can identify these distinct sentiments towards different aspects of the product, providing valuable insights for businesses, marketers, and decision-makers. \cite{doi:10.1504/IJESMS.2021.119892}\cite{Jiang2023AspectBasedSA}
+
+\subsection{Key Components of ABSA:}
+The key components of ABSA include aspects, opinions, and sentiment polarity:
+\begin{itemize}
+  \item \textbf{Aspects}: These are the specific entities or features within the text that the sentiment is expressed towards. Aspects can be explicit or implicit. Explicit aspects are directly mentioned in the text, while implicit aspects are inferred from the context.\cite{hua2023systematic} \cite{NazirIssues&Chall2023}
+  \item \textbf{Opinions}: These are the subjective statements or expressions in the text that convey sentiment. Opinions can express various types of sentiment, including emotions, evaluations, appraisals, and speculations.\cite{hua2023systematic}
+  \item \textbf{Sentiment Polarity}: This refers to the orientation of the sentiment expressed in the opinion. The sentiment polarity can be positive, negative, or neutral.\cite{hua2023systematic}\cite{NazirIssues&Chall2023}
+\end{itemize}
+
+\subsection{Examples of ABSA: }
+Consider the following review for a smartphone: \textit{"The phone has an excellent camera but the battery life is disappointing."} In this case, ABSA would identify \textit{"camera"} and \textit{"battery life"} as the aspects. The opinion about the camera is \textit{"excellent"}, which has a positive sentiment polarity. The opinion about the battery life is \textit{"disappointing"}, which has a negative sentiment polarity. Thus, ABSA provides a more granular analysis of the sentiment in the review, identifying distinct sentiments towards different aspects of the product.\cite{hua2023systematic}
+
+\section{Techniques and Models: }
+ABSA employs a variety of techniques and models, including machine learning, natural language processing (NLP), and deep learning, to identify aspects and sentiments in text data. \cite{NazirIssues&Chall2023}
+
+\subsection{Machine Learning Approaches: }
+Machine learning techniques are widely used in ABSA. These techniques involve training models on labeled data to predict the sentiment of aspects in new, unseen data. Some of the commonly used machine learning algorithms in ABSA include decision trees, random forest, logistic regression, and support vector machines (SVM).\cite{Adagale2023AspectBS}\cite{Horsa2023AspectBasedSA}. These algorithms have shown high accuracy in ABSA tasks with reported accuracy ranging from 85\% to 93\%.\cite{Horsa2023AspectBasedSA}\cite{hua2023systematic}
+
+However, machine learning approaches have some limitations. They often require large amounts of labeled data for training, and their performance can be affected by the quality and representation of the training data. They may also struggle with implicit aspect extraction and complex relationships between opinions and aspects\cite{Adagale2023AspectBS}.
+
+\subsection{Natural Language Processing Techniques:}
+NLP techniques are crucial in ABSA for tasks such as aspect extraction, opinion mining, and sentiment classification \cite{rocca2023natural}\cite{Adagale2023AspectBS}. These techniques can involve syntax-based methods, frequency-based methods, and feature extraction methods\cite{Adagale2023AspectBS}. For example, NLP can be used to identify named entities in a text (named entity recognition), extract the main topics expressed in a set of texts (topic modeling), and automatically extract the sentiment of a given text (sentiment classification) \cite{rocca2023natural}
+
+\subsection{Deep Learning Models: }
+Deep learning models, a subset of machine learning models, have shown promising results in ABSA. These models can automatically learn to extract useful features from raw text data, which can be beneficial for tasks such as aspect extraction and sentiment classification.\cite{Kumar2023AspectBasedSA} \cite{Dhanith2023ACE}
+
+Some of the deep learning models used in ABSA include Convolutional Neural Networks (CNNs), Recurrent Neural Networks (RNNs), and Transformer-based models like BERT (Bidirectional Encoder Representations from Transformers)\cite{Dhanith2023ACE}\cite{Kumar2023AspectBasedSA}. For example, a Sentiment-Support Graph Convolutional Network (SSGCN) has been proposed, which combines semantic and grammatical information to effectively analyze sentiment. \cite{Dhanith2023ACE}
+
+Deep learning models can handle complex relationships in text data and can work well with large amounts of data. However, they can be computationally intensive and may require significant resources for training. They can also be more difficult to interpret compared to traditional machine learning models\cite{Kumar2023AspectBasedSA}\cite{Dhanith2023ACE}.
+
+\subsection{Examples: }
+Consider a review for a restaurant: \textit{"The food was delicious but the service was slow"}. A machine learning model trained for ASBA might identify \textit{"food"} and \textit{"service"} as the aspects, and \textit{"delicious"} and \textit{"slow"} as the opinions. It might then classify the sentiment towards the food as positive and the sentiment towards the service as negative. A deep learning model might perform a similar analysis but could potentially capture more nuanced sentiment information by considering the context and relationships between words in the review.
+
+\section{Datasets for Aspect-Based Sentiment Analysis: }
+Several datasets are commonly used for training and evaluating aspect-based sentiment analysis (ABSA) models. These datasets typically consist of text data, such as product reviews or social media posts, annotated with aspects and their associated sentiments\cite{Dhanith2023ACE}\cite{hua2023systematic}.
+\begin{itemize}
+    \item \textbf{SemEval Datasets: } The SemEval (Semantic Evaluation) workshops have organized several tasks on ABSA, providing datasets in multiple languages and domains. These datasets are widely used in ABSA research\cite{hua2023systematic}\cite{NazirIssues&Chall2023}.
+    \item \textbf{Multi-Aspect Multi-Sentiment (MAMS) Dataset: } This dataset is unique in that each sentence contains at least two different aspects with different sentiments. It provides a challenging setting for ABSA models\cite{Dhanith2023ACE}.
+    \item INCLUDE OTHER DATA ALSO
+\end{itemize}
+However, these datasets have limitations. For instance, about 60\% of the testing aspects in commonly used public datasets are unknown to the training set\cite{hua2023systematic}. This means that many ASBA models are tested on aspects they have not seen during training, which can affect their performance.
+
+\subsection{Evaluation Metrics for ABSA Models: }
+The performance of ABSA models is typically evaluated using standard machine learning metrics such as precision, recall, and F1-score. These metrics are calculated for each aspect and sentiment and then averaged to provide an overall score\cite{hua2023systematic}\cite{NazirIssues&Chall2023}.
+However, these metrics have limitations. For example, they do not account for the inherent complexity and variability of human language. They also do not consider the semantic similarity between predicted and actual aspects or sentiments, which can lead to overly harsh penalties for near-miss predictions\cite{NazirIssues&Chall2023}.
+
+\subsection{Limitations of Existing Datasets and Evaluation Metrics: }
+Existing datasets for ABSA have several limitations. They often lack diversity in aspects and sentiments, which can limit the generalizability of trained models. They also often contain imbalanced classes, with some aspects of sentiments being much more common than others. This can lead to models that perform well on common classes but poorly rare ones \cite{NazirIssues&Chall2023}.
+Evaluation metrics for ABSA also have limitations. They often fail to capture the nuanced performance of models, especially when dealing with complex or implicit aspects and sentiments. They also do not account for the inherent subjectivity of sentiment analysis, where different individuals may have different interpretations of the same text \cite{NazirIssues&Chall2023}\cite{Dhanith2023ACE}.
+
+\section{Real-World Applications of Aspect-Based Sentiment Analysis: }
+Aspect-based Sentiment Analysis (ABSA) has a wide range of applications in the real world, particularly in this business sector. It is used to analyze and understand people's opinions at the aspect level, which can provide more nuanced and detailed insights than traditional sentiment analysis \cite{hua2023systematic}.
+\begin{itemize}
+    \item \textbf{Customer Reviews: } ABSA is often used to analyze customer reviews. By identifying specific aspects and their associated sentiments, businesses can gain a deeper understanding of customer opinions. This can help them identify strengths and weaknesses in their products or services, and make informed decisions to improve customer satisfaction \cite{Horsa2023AspectBasedSA}
+    \item \textbf{Social Media Analysis: } ABSA can also be used to analyze social media posts. This can provide insights into public opinion on various topics, helping businesses and other organizations to monitor their reputation, understand customer needs and preferences, and respond to emerging trends\cite{hua2023systematic}
+\end{itemize}
+
+\subsection{Challenges and Open Issues in ABSA: }
+Despite its potential, ABSA faces several challenges and open issues: 
+\begin{itemize}
+    \item \textbf{Domain-Specific Nuances: } ABSA models often struggle to handle domain-specific nuances. For example, the same word can have different sentiments in different contexts or domains. This makes it challenging to build ABSA models that can generalize well across different domains \cite{NazirIssues&Chall2023}\cite{doi:10.1504/IJESMS.2021.119892}.
+    \item \textbf{Diverse Opinions: } Many texts, such as customer reviews or social media posts, contain diverse opinions towards different aspects. This makes it difficult to accurately identify and analyze all relevant aspects and their associated sentiments \cite{NazirIssues&Chall2023}.
+    \item \textbf{Implict Aspects: } ABSA models often struggle to handle implicit aspects, where the sentiment is expressed towards an aspect that is not explicitly mentioned in the text. This requires a deep understanding of the text and its context, which is challenging for current ABSA models \cite{NazirIssues&Chall2023}.
+    \item \textbf{Cross-Lingual and Cross-Domain Challenges: } ABSA models often struggle to handle texts in different languages or from different domains. This is due to the lack of annotated data in many languages and domains, as well as the inherent differences in language use and sentiment expression across different languages and domains \cite{Verma2022ASO}.
+    \item \textbf{Aspect and Sentiment Evolution: } The aspect that people care about and the sentiments they express can change over time. Current ABSA models often struggle to handle this dynamicity, which can affect their performance and usefulness in real-world applications\cite{NazirIssues&Chall2023}.
+    
+\end{itemize}
+
+\section{Recent Advances And Trends: }
+Several recent research papers and advancements have contributed to the field of Aspect-Based Sentiment Analysis (ABSA):
+
+\begin{itemize}
+    \item \textbf{Semi-supervised Model for Aspect Sentiment Detection: } This study proposed a semi-supervised \cite{Madhoushi2023SemiSupervisedMF}
+
+    \item \textbf{Meta-Based Self-Training and Re-Weighing for ABSA: } This research \cite{He2023MetaBasedSA}
+
+    \item \textbf{OATS: Opinion Aspect Target Sentiment Quadruple Extraction Dataset for ABSA: } This paper introduced the OATS dataset which \cite{chebolu2023oats}
+
+    \item \textbf{SENER: Sentiment Element Named Entity Recognition for ABSA: } This research proposed a sentiment element named entity recognition (SENER) for ABSA. SENER integrated the concepts of named entity recognition (NER) and generative ABSA to retrieve the sentiment entities with predefined sentiment element names, leading to better semantic and sentiment structure understanding \cite{Lee2023SENERSE}.
+\end{itemize}
+
+\section{Methodology}
+
+\section{Data}
+Mention all the datasets available in each of the paper
+
+\section{Research Hypothesis and Research Questions}
+\subsection{Research Hypothesis:} 
+The choice of aspect extraction technique significantly influences the overall sentiment analysis performance in ABSA from user-generated text.
+\subsection{Research Questions: }
+
+1. What are the most effective methods for aspect extraction in ABSA from user-generated text?
+2. How does the choice of aspect extraction technique impact the accuracy and reliability of sentiment analysis in ABSA?
+3. Are there specific contextual nuances or challenges in user-generated content that influence the effectiveness of aspect extraction techniques in ABSA?
+
+\section{Goals And Objectives}
+Provide an overview of the goals and objectives of your literature review
+
+\section{Research Problems}
+
+\section{Systematic Literature Review}
+
+\section{Discussion with critique}
+
+\section {Outcomes}
+
+
+\bibliographystyle{plain} %choose your preferred bibliography style
+
+\bibliography{mybibliography} %include your biblogrpahy file
+
+\end{document}
